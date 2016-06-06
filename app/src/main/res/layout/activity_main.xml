@@ -11,7 +11,68 @@
     tools:context="com.sgffsg.plusminusview.MainActivity">
 
     <TextView
-        android:text="Hello World!"
+        android:id="@+id/tv_sum"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sum:"/>
+    <TextView
+        android:id="@+id/tv_sum_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_toRightOf="@id/tv_sum"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/holo_red_light"
+        android:text="0$"/>
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="buy"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/holo_blue_bright">
+
+        <ImageView
+            android:id="@+id/item_image_good"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:src="@mipmap/good"/>
+        <TextView
+            android:id="@+id/item_tv_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_image_good"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="Price:"/>
+        <TextView
+            android:id="@+id/item_tv_good_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/item_tv_good"
+            android:layout_alignBottom="@id/item_tv_good"
+            android:textColor="@android:color/holo_red_light"
+            android:text="8.5 $"/>
+
+        <com.sgffsg.plusminusview.view.PlusMinusView
+            android:id="@+id/item_plusminusview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"/>
+
+
+    </RelativeLayout>
 </RelativeLayout>
